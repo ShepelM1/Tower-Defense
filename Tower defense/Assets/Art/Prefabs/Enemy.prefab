@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7975702512094840509}
   - component: {fileID: 186315868893810947}
   - component: {fileID: 7488112850315532727}
-  - component: {fileID: 3140590486376658478}
+  - component: {fileID: 3486575546957743717}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 3210418815999221545}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 7, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -149,7 +149,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &3140590486376658478
+--- !u!114 &3486575546957743717
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,5 +161,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa06b039d937a842922d6fe52e63112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  moveSpeed: 2
+  rb: {fileID: 186315868893810947}
+  moveSpeed: 10
