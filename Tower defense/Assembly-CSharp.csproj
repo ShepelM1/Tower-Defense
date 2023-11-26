@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Code\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Code\Scripts\EnemyMovement.cs" />
+    <Compile Include="Assets\Turret.cs" />
     <Compile Include="Assets\Code\Scripts\LevelManager.cs" />
   </ItemGroup>
   <ItemGroup>
