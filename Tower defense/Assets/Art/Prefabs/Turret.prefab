@@ -106,7 +106,7 @@ SpriteRenderer:
   m_SortingLayerID: 27705291
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: fbe6ea3f7e9075042b3f1921f9c699a7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6cb0f3b0299ca0a4d99d50ff7049a608, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -179,7 +179,7 @@ Transform:
   m_Children:
   - {fileID: 4063961120169387378}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5282084732347903570
 MonoBehaviour:
@@ -190,14 +190,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8361868072217757423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5857734d45ffe034883111492cc35ad9, type: 3}
+  m_Script: {fileID: 11500000, guid: ec9d35870a818d14e8b49b06cf603635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   turretRotationPoint: {fileID: 4063961120169387378}
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 4495762508349890658, guid: dd85a47e788f9fc41891211467a2216d, type: 3}
   firingPoint: {fileID: 6066131340503685077}
   targetingRange: 3
   rotationSpeed: 200
