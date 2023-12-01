@@ -381,6 +381,7 @@
 "Assets/Code/Scripts/EnemyMovement.cs"
 "Assets/Code/Scripts/EnemySpawner.cs"
 "Assets/Code/Scripts/Health.cs"
+"Assets/Code/Scripts/IceTower.cs"
 "Assets/Code/Scripts/LevelManager.cs"
 "Assets/Code/Scripts/Menu.cs"
 "Assets/Code/Scripts/Plot.cs"

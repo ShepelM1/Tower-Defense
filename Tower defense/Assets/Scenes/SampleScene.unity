@@ -6336,9 +6336,9 @@ MonoBehaviour:
   - name: Basic Turret
     cost: 100
     prefab: {fileID: 8361868072217757423, guid: f0e0469f8c743cb4ead5b7797b6487f7, type: 3}
-  - name: Test Turret
+  - name: Ice Turret
     cost: 150
-    prefab: {fileID: 8361868072217757423, guid: 8f41a7d5d802dc44790edfd93e0bde42, type: 3}
+    prefab: {fileID: 8992578686929067744, guid: 13bb4e0a8fb6e1f4abada692bf597351, type: 3}
 --- !u!1001 &1396286973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6727,7 +6727,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Test Turret
+  m_text: Ice Tower
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9379,10 +9379,10 @@ RectTransform:
   m_Father: {fileID: 1304487162}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -90}
-  m_SizeDelta: {x: 0, y: 50}
+  m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1947201906
 MonoBehaviour:
@@ -9944,8 +9944,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -58.5}
-  m_SizeDelta: {x: 0, y: -117}
+  m_AnchoredPosition: {x: 0, y: -30.75}
+  m_SizeDelta: {x: 0, y: -178.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2021376478
 MonoBehaviour:
@@ -10644,7 +10644,7 @@ GameObject:
   - component: {fileID: 2111470236}
   - component: {fileID: 2111470235}
   m_Layer: 5
-  m_Name: Test Turret
+  m_Name: IceTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
