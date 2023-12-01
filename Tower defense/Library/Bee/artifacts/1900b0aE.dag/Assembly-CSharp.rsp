@@ -382,6 +382,7 @@
 "Assets/Code/Scripts/EnemySpawner.cs"
 "Assets/Code/Scripts/Health.cs"
 "Assets/Code/Scripts/LevelManager.cs"
+"Assets/Code/Scripts/Plot.cs"
 "Assets/Code/Scripts/Turret.cs"
 -langversion:9.0
 
