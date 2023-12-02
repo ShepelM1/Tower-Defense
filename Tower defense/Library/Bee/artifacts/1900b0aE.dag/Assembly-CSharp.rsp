@@ -387,6 +387,8 @@
 "Assets/Code/Scripts/Plot.cs"
 "Assets/Code/Scripts/Tower.cs"
 "Assets/Code/Scripts/Turret.cs"
+"Assets/Code/Scripts/UIManager.cs"
+"Assets/Code/Scripts/UpgradeUIHandler.cs"
 -langversion:9.0
 
 /deterministic
