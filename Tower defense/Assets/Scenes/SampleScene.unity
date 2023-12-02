@@ -6285,10 +6285,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 3210418815999221545, guid: 82289a2a670d257468f033a7ab96a073, type: 3}
+  - {fileID: 3210418815999221545, guid: 82289a2a670d257468f033a7ab96a073, type: 3}
+  - {fileID: 3210418815999221545, guid: 33c9eb50136f61b4ba768d90944068b0, type: 3}
   baseEnemies: 8
-  enemiesPerSecond: 0.5
+  enemiesPerSecond: 1
   timeBetweenWaves: 5
   difficultyScalingFactor: 0.75
+  enemiesPerSecondCap: 10
 --- !u!114 &1387708550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9944,7 +9947,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -30.75}
+  m_AnchoredPosition: {x: 0, y: -30.749939}
   m_SizeDelta: {x: 0, y: -178.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2021376478
