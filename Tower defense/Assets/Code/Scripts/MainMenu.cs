@@ -16,17 +16,8 @@ public class MainMenu : MonoBehaviour
 
     public void OptionMenu()
     {
-        if (mainMenu.activeInHierarchy)
-        {
-            mainMenu.SetActive(false);
-            optionMenu.SetActive(true);
-        }
-        else
-        {
-            optionMenu.SetActive(false);
-            mainMenu.SetActive(true);
-        }
-
+        mainMenu.SetActive(false);
+        optionMenu.SetActive(true);
     }
 
     public void QuitGame()
