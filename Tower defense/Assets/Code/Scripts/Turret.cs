@@ -115,9 +115,10 @@ public class Turret : MonoBehaviour
         targetingRange = CalculateRange();
 
         CloseUpgradeUI();
-        Debug.Log("New BPS: " + bps);
+
+       /* Debug.Log("New BPS: " + bps);
         Debug.Log("New targeting range: " + targetingRange);
-        Debug.Log("New Cost: " + CalculateCost());
+        Debug.Log("New Cost: " + CalculateCost());*/
     }
 
     private int CalculateCost()

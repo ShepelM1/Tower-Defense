@@ -64,10 +64,12 @@
     <Compile Include="Assets\Code\Scripts\IceTower.cs" />
     <Compile Include="Assets\Code\Scripts\UpgradeUIHandler.cs" />
     <Compile Include="Assets\Code\Scripts\BuildManager.cs" />
+    <Compile Include="Assets\Code\Scripts\AudiaManager.cs" />
     <Compile Include="Assets\Code\Scripts\Turret.cs" />
     <Compile Include="Assets\Code\Scripts\Health.cs" />
     <Compile Include="Assets\Code\Scripts\Plot.cs" />
     <Compile Include="Assets\Code\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Code\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Code\Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Code\Scripts\Tower.cs" />
     <Compile Include="Assets\Code\Scripts\LevelManager.cs" />
