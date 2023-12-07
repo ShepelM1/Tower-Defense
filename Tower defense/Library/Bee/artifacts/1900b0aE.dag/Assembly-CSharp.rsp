@@ -392,6 +392,7 @@
 "Assets/Code/Scripts/Turret.cs"
 "Assets/Code/Scripts/UIManager.cs"
 "Assets/Code/Scripts/UpgradeUIHandler.cs"
+"Assets/Code/Scripts/VolumeSettings.cs"
 -langversion:9.0
 
 /deterministic
