@@ -12,6 +12,12 @@ public class Bullet : MonoBehaviour
     [SerializeField] private int bulletDamage = 1;
 
     private Transform target;
+    private AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     public void SetTarget(Transform _target)
     {
@@ -30,6 +36,7 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         collision.gameObject.GetComponent<Health>().TakeDamage(bulletDamage);
+        audioManager.PlaySFX(audioManager.touchEnemy);
         Destroy(gameObject);
     }
 }

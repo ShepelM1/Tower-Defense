@@ -8,7 +8,13 @@ public class Health : MonoBehaviour
     [SerializeField] private int hitPoints = 2;
     [SerializeField] private int currencyWorth = 50;
 
+    private AudioManager audioManager;
     private bool isDestroyed = false;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     public void TakeDamage(int dmg)
     {
@@ -19,6 +25,7 @@ public class Health : MonoBehaviour
             EnemySpawner.onEnemyDestroy.Invoke();
             LevelManager.main.IncreaseCurrency(currencyWorth);
             isDestroyed = true;
+            audioManager.PlaySFX(audioManager.death);
             Destroy(gameObject);
         }
     }
