@@ -4,12 +4,23 @@ using UnityEngine.UI;
 
 public class VolumeSettings : MonoBehaviour
 {
+    [SerializeField] Sprite soundOnImage;
+    [SerializeField] Sprite soundOffImage;
+    [SerializeField] AudioSource musicAudioSource;
+    [SerializeField] AudioSource soundEffectsAudioSource;
+    [SerializeField] Button musicButton;
+    [SerializeField] Button soundEffectsButton;
     [SerializeField] private AudioMixer myMixer;
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Slider SFXSlider;
 
+    private bool isMusicOn = true;
+    private bool isSoundEffectsOn = true;
+
     private void Start()
     {
+        musicButton.onClick.AddListener(ToggleMusic);
+        soundEffectsButton.onClick.AddListener(ToggleSoundEffects);
         if (PlayerPrefs.HasKey("musicVolume"))
         {
             LoadVolune();
@@ -43,4 +54,20 @@ public class VolumeSettings : MonoBehaviour
         SetMusicVolume();
         SetSFXVolume();
     }
+
+    private void ToggleMusic()
+    {
+        isMusicOn = !isMusicOn;
+        musicButton.image.sprite = isMusicOn ? soundOnImage : soundOffImage;
+        musicAudioSource.mute = !isMusicOn;
+    }
+
+    private void ToggleSoundEffects()
+    {
+        isSoundEffectsOn = !isSoundEffectsOn;
+        soundEffectsButton.image.sprite = isSoundEffectsOn ? soundOnImage : soundOffImage;
+        soundEffectsAudioSource.mute = !isSoundEffectsOn;
+    }
 }
+
+
