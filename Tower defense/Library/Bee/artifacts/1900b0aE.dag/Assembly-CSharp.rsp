@@ -387,6 +387,7 @@
 "Assets/Code/Scripts/MainMenu.cs"
 "Assets/Code/Scripts/Menu.cs"
 "Assets/Code/Scripts/OptionMenu.cs"
+"Assets/Code/Scripts/PauseMenu.cs"
 "Assets/Code/Scripts/Plot.cs"
 "Assets/Code/Scripts/Tower.cs"
 "Assets/Code/Scripts/Turret.cs"

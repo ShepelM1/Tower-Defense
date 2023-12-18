@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -34,7 +34,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
+  m_Name: SceneView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -45,13 +45,13 @@ MonoBehaviour:
     height: 535
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 20}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,8 +243,8 @@ MonoBehaviour:
     y: 0
     width: 698
     height: 535
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -913,9 +913,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 188.0282, y: 341.76663, z: -9.48397}
+    m_Target: {x: 513.44617, y: 309.34042, z: -10.348999}
     speed: 2
-    m_Value: {x: 188.0282, y: 341.76663, z: -9.48397}
+    m_Value: {x: 513.44617, y: 309.34042, z: -10.348999}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -965,9 +965,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 564.14874
+    m_Target: 368.67767
     speed: 2
-    m_Value: 564.14874
+    m_Value: 368.67767
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1029,9 +1029,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 28670000
-      m_LastClickedID: 26408
-      m_ExpandedIDs: 88f3fffff0f9ffff0efbffffa0660000c666000058670000
+      m_SelectedIDs: 88bcffff
+      m_LastClickedID: -17272
+      m_ExpandedIDs: 88bcfffffec8ffff64e4ffff70e5ffffb8ecffff0eeeffffacf3ffff0efbffff3c6700007c6c00000e6d0000486f000034700000ce740000607500006a7600007c760000ba7600001477000070770000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1096,7 +1096,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 527
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -1147,7 +1147,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Code/Scripts
+    - Assets/Art/Sprites/OptionMenu
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1155,16 +1155,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Code/Scripts
+  - Assets/Art/Sprites/OptionMenu
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Dyploma Work\Tower-Defense\Tower defense
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9c620000
-    m_LastClickedID: 25244
-    m_ExpandedIDs: 000000008262000084620000866200008862000000ca9a3bffffff7f
+    m_SelectedIDs: 98620000
+    m_LastClickedID: 25240
+    m_ExpandedIDs: 0000000082620000846200008662000088620000a0620000a078000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1220,7 +1220,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300005e610000f4790000107a0000187a0000fe7900006e8d00006c8d00007e9b0000789b0000768100008281000000000000b4c591ff2a670100c2860100e85d00001a650000466900005e6900002c6d000012670000206700008e61000092610000906100009662000076610000
+    m_ExpandedInstanceIDs: c62300005e610000f4790000107a0000187a0000fe7900006e8d00006c8d00007e9b0000789b0000768100008281000000000000b4c591ff2a670100c2860100e85d00001a650000466900005e6900002c6d000012670000206700008e610000926100009061000096620000766100003262000030620000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1318,7 +1318,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 32870
+  m_LastSelectedObjectID: -17272
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
