@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyMovement : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Animator animator;
 
     [Header("Attributes")]
-    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float moveSpeed = 1f;
 
     private Transform target;
     private int pathIndex = 0;
+    private Vector2 direction;
 
     private float baseSpeed;
 
@@ -23,6 +26,12 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
+        Vector2 direction = (target.position - transform.position).normalized;
+
+        animator.SetFloat("Horizontal", direction.x);
+        animator.SetFloat("Vertical", direction.y);
+        animator.SetFloat("Speed", direction.sqrMagnitude);
+
         if (Vector2.Distance(target.position, transform.position) <= 0.1f)
         {
             pathIndex++;
@@ -31,17 +40,17 @@ public class EnemyMovement : MonoBehaviour
             {
                 EnemySpawner.onEnemyDestroy.Invoke();
                 Destroy(gameObject);
-                return;
-            } else
+            }
+            else
             {
                 target = LevelManager.main.path[pathIndex];
             }
         }
     }
 
+
     private void FixedUpdate()
     {
-
         Vector2 direction = (target.position - transform.position).normalized;
 
         rb.velocity = direction * moveSpeed;

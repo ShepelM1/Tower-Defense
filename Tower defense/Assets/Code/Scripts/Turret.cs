@@ -136,9 +136,11 @@ public class Turret : MonoBehaviour
         return targetingRangeBase * Mathf.Pow(level, 0.4f);
     }
 
+    #if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
         Handles.color = Color.cyan;
         Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
     }
+    #endif
 }
