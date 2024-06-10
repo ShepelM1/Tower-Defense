@@ -180,6 +180,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitPoints: 2
   currencyWorth: 25
+  animator: {fileID: 7239114505478854911}
+  deathAnimationDuration: 2
 --- !u!95 &7239114505478854911
 Animator:
   serializedVersion: 5

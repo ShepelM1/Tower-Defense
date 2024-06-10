@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -26,7 +23,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
-        Vector2 direction = (target.position - transform.position).normalized;
+        direction = (target.position - transform.position).normalized;
 
         animator.SetFloat("Horizontal", direction.x);
         animator.SetFloat("Vertical", direction.y);
@@ -51,8 +48,6 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 direction = (target.position - transform.position).normalized;
-
         rb.velocity = direction * moveSpeed;
     }
 
@@ -63,6 +58,18 @@ public class EnemyMovement : MonoBehaviour
 
     public void ResetSpeed()
     {
-        moveSpeed = baseSpeed;
+        Health health = GetComponent<Health>();
+        if (health != null)
+        {
+            float currentHitPoints = health.hitPoints;
+            if (currentHitPoints <= 0)
+            {
+                moveSpeed = 0;
+            }
+            else
+            {
+                moveSpeed = baseSpeed;
+            }
+        }
     }
 }

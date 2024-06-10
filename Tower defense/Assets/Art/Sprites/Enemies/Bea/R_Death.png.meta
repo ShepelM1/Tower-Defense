@@ -128,7 +128,7 @@ TextureImporter:
         serializedVersion: 2
         x: 10
         y: 8
-        width: 31
+        width: 32
         height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -207,55 +207,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: R_Death_9
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 8
-        width: 31
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d18dff19a918e145bc3d569a6fec8b1
-      internalID: 1674438630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: R_Death_10
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 8
-        width: 31
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c472520f8808c79438f5751d4c618d4e
-      internalID: -1646384289
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: R_Death_1
       rect:
         serializedVersion: 2
-        x: 58
-        y: 8
-        width: 31
-        height: 28
+        x: 107
+        y: 10
+        width: 28
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,13 +228,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: R_Death_5
+      name: R_Death_9
       rect:
         serializedVersion: 2
-        x: 107
-        y: 9
-        width: 27
-        height: 27
+        x: 57
+        y: 8
+        width: 32
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d6894fcf52107046bbf59091db226e9
-      internalID: 2058855557
+      spriteID: 0d3adb06f87bc1b439bbf77b1632b9ef
+      internalID: 1674438630
       vertices: []
       indices: 
       edges: []
@@ -303,8 +261,6 @@ TextureImporter:
     nameFileIdTable:
       R_Death_0: -1480880594
       R_Death_1: -252857337
-      R_Death_10: -1646384289
-      R_Death_11: -1603831092
       R_Death_2: 1438092295
       R_Death_3: 1481622742
       R_Death_4: 1482602604

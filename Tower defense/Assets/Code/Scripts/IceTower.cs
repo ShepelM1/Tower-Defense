@@ -8,10 +8,10 @@ public class IceTower : MonoBehaviour
     [Header("References")]
     [SerializeField] private LayerMask enemyMask;
 
-    [Header("Attribute")]
+    [Header("Attributes")]
     [SerializeField] private float targetingRange = 5f;
-    [SerializeField] private float aps = 4f; //Attack Per Second
-    [SerializeField] private float freezeTime = 1f; //Attack Per Second
+    [SerializeField] private float aps = 4f;
+    [SerializeField] private float freezeTime = 1f;
 
     private float timeUntilFire;
 
@@ -28,18 +28,18 @@ public class IceTower : MonoBehaviour
 
     private void FreezeEnemies()
     {
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, (Vector2)transform.position, 0f, enemyMask);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, targetingRange, enemyMask);
 
         if (hits.Length > 0)
         {
-            for (int i = 0; i < hits.Length; i++)
+            foreach (Collider2D hit in hits)
             {
-                RaycastHit2D hit = hits[i];
-
-                EnemyMovement em = hit.transform.GetComponent<EnemyMovement>();
-                em.UpdateSpeed(0.5f);
-
-                StartCoroutine(ResetEnemySpeed(em));
+                EnemyMovement em = hit.GetComponent<EnemyMovement>();
+                if (em != null)
+                {
+                    em.UpdateSpeed(0.5f);
+                    StartCoroutine(ResetEnemySpeed(em));
+                }
             }
         }
     }
@@ -47,15 +47,14 @@ public class IceTower : MonoBehaviour
     private IEnumerator ResetEnemySpeed(EnemyMovement em)
     {
         yield return new WaitForSeconds(freezeTime);
-
         em.ResetSpeed();
     }
 
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
         Handles.color = Color.cyan;
         Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
     }
-    #endif
+#endif
 }
