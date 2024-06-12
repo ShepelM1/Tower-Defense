@@ -15,6 +15,24 @@ public class AudioManager : MonoBehaviour
 
     private static AudioManager instance;
 
+    public static AudioManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<AudioManager>();
+                if (instance == null)
+                {
+                    GameObject go = new GameObject("AudioManager");
+                    instance = go.AddComponent<AudioManager>();
+                    DontDestroyOnLoad(go);
+                }
+            }
+            return instance;
+        }
+    }
+
     private void Awake()
     {
         if (instance == null)
@@ -37,5 +55,10 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX(AudioClip clip)
     {
         SFXSource.PlayOneShot(clip);
+    }
+
+    public void MuteSFX(bool mute)
+    {
+        SFXSource.mute = mute;
     }
 }

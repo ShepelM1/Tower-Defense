@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Plot : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class Plot : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        sr.color = hoverColor;  
+        sr.color = hoverColor;
     }
 
     private void OnMouseExit()

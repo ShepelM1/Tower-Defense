@@ -50,7 +50,8 @@ public class Turret : MonoBehaviour
         if (!CheckTargetIsInRange())
         {
             target = null;
-        }else
+        }
+        else
         {
             timeUntilFire += Time.deltaTime;
 
@@ -86,7 +87,7 @@ public class Turret : MonoBehaviour
 
     private void RotateTowardsTarget()
     {
-        float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg-90f;
+        float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg - 90f;
 
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
         turretRotationPoint.rotation = Quaternion.RotateTowards(turretRotationPoint.rotation, targetRotation, rotationSpeed * Time.deltaTime);
@@ -116,9 +117,9 @@ public class Turret : MonoBehaviour
 
         CloseUpgradeUI();
 
-       /* Debug.Log("New BPS: " + bps);
-        Debug.Log("New targeting range: " + targetingRange);
-        Debug.Log("New Cost: " + CalculateCost());*/
+        /* Debug.Log("New BPS: " + bps);
+         Debug.Log("New targeting range: " + targetingRange);
+         Debug.Log("New Cost: " + CalculateCost());*/
     }
 
     private int CalculateCost()
@@ -136,11 +137,11 @@ public class Turret : MonoBehaviour
         return targetingRangeBase * Mathf.Pow(level, 0.4f);
     }
 
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
         Handles.color = Color.cyan;
         Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
     }
-    #endif
+#endif
 }
