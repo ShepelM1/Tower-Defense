@@ -4,8 +4,10 @@ using UnityEngine.UI;
 
 public class VolumeSettings : MonoBehaviour
 {
-    [SerializeField] Sprite soundOnImage;
-    [SerializeField] Sprite soundOffImage;
+    [SerializeField] Sprite musicOnImage;
+    [SerializeField] Sprite musicOffImage;
+    [SerializeField] Sprite SFXOnImage;
+    [SerializeField] Sprite SFXOffImage;
     [SerializeField] AudioSource musicAudioSource;
     [SerializeField] AudioSource soundEffectsAudioSource;
     [SerializeField] Button musicButton;
@@ -58,14 +60,14 @@ public class VolumeSettings : MonoBehaviour
     private void ToggleMusic()
     {
         isMusicOn = !isMusicOn;
-        musicButton.image.sprite = isMusicOn ? soundOnImage : soundOffImage;
+        musicButton.image.sprite = isMusicOn ? musicOnImage : musicOffImage;
         musicAudioSource.mute = !isMusicOn;
     }
 
     private void ToggleSoundEffects()
     {
         isSoundEffectsOn = !isSoundEffectsOn;
-        soundEffectsButton.image.sprite = isSoundEffectsOn ? soundOnImage : soundOffImage;
+        soundEffectsButton.image.sprite = isSoundEffectsOn ? SFXOnImage : SFXOffImage;
         soundEffectsAudioSource.mute = !isSoundEffectsOn;
     }
 }

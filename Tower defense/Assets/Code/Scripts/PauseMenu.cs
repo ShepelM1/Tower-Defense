@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject pauseMenuUI; 
-    public Button pauseButton;    
-    public Button resumeButton;    
-    public Button muteButton;      
-    public Button sfxMuteButton;   
-    public Button continueButton;  
-    public Button mainMenuButton;  
+    public GameObject pauseMenuUI;
+    public Button pauseButton;
+    public Button resumeButton;
+    public Button muteButton;
+    public Button sfxMuteButton;
+    public Button continueButton;
+    public Button mainMenuButton;
+
+    // Додайте змінні для спрайтів
+    public Sprite mutedSprite;
+    public Sprite unmutedSprite;
+    public Sprite sfxMutedSprite;
+    public Sprite sfxUnmutedSprite;
 
     private bool isGamePaused = false;
     private bool isMuted = false;
@@ -23,8 +27,11 @@ public class PauseMenu : MonoBehaviour
         pauseButton.onClick.AddListener(TogglePauseMenu);
         muteButton.onClick.AddListener(ToggleMute);
         sfxMuteButton.onClick.AddListener(ToggleSfxMute);
-        continueButton.onClick.AddListener(ResumeGame); 
+        continueButton.onClick.AddListener(ResumeGame);
         mainMenuButton.onClick.AddListener(LoadMainMenu);
+
+        UpdateMuteButtonSprite();
+        UpdateSfxMuteButtonSprite();
     }
 
     void TogglePauseMenu()
@@ -59,17 +66,29 @@ public class PauseMenu : MonoBehaviour
     {
         isMuted = !isMuted;
         AudioListener.volume = isMuted ? 0 : 1;
+        UpdateMuteButtonSprite();
     }
 
     void ToggleSfxMute()
     {
         isSfxMuted = !isSfxMuted;
         AudioManager.Instance.MuteSFX(isSfxMuted);
+        UpdateSfxMuteButtonSprite();
     }
 
     void LoadMainMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(0); 
+        SceneManager.LoadScene(0);
+    }
+
+    void UpdateMuteButtonSprite()
+    {
+        muteButton.image.sprite = isMuted ? mutedSprite : unmutedSprite;
+    }
+
+    void UpdateSfxMuteButtonSprite()
+    {
+        sfxMuteButton.image.sprite = isSfxMuted ? sfxMutedSprite : sfxUnmutedSprite;
     }
 }
