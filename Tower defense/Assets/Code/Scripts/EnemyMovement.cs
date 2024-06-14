@@ -58,8 +58,7 @@ public class EnemyMovement : MonoBehaviour
 
     public void ResetSpeed()
     {
-        Health health = GetComponent<Health>();
-        if (health != null)
+        if (TryGetComponent(out Health health))
         {
             float currentHitPoints = health.hitPoints;
             if (currentHitPoints <= 0)

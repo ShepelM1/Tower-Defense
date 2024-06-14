@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Upgrade
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -449,7 +449,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 1.53}
   m_SizeDelta: {x: 200, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1382992367386598096
@@ -718,6 +718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouse_over: 0
+  priceText: {fileID: 7768203503611036426}
 --- !u!114 &604710297304969530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,7 +739,26 @@ MonoBehaviour:
   firingPoint: {fileID: 6066131340503685077}
   upgradeUI: {fileID: 5478942310684681313}
   upgradeButton: {fileID: 5745226626401472681}
-  targetingRange: 5
-  rotationSpeed: 5
-  bps: 1
-  baseUpgradeCost: 100
+  turretSpriteRenderer: {fileID: 8308786531326137387}
+  turretSprites:
+  - {fileID: 336329390, guid: b322b420a6ceed74c8365a12ec78d9c5, type: 3}
+  - {fileID: 347065366, guid: 600b711a67bac6b4c820ee639e53fbd4, type: 3}
+  - {fileID: 355926577, guid: c4c46440705e3424c8b591533e8a7227, type: 3}
+  arherSpriteRenderer: {fileID: 761352504011469883}
+  archerSprites:
+  - {fileID: 1299252045, guid: 8904996cc616fa545b69d8970af23efe, type: 3}
+  - {fileID: 251044974, guid: bf80e68220e39d241938ab2e38e48a68, type: 3}
+  - {fileID: -1349816672, guid: 9aa24d93a5a970b4595d97682359ebb3, type: 3}
+  targetingRanges:
+  - 3
+  - 3.5
+  - 5
+  rotationSpeeds:
+  - 150
+  - 200
+  - 300
+  bpsLevels:
+  - 0.5
+  - 1
+  - 2
+  upgradeCosts: 64000000c80000002c010000

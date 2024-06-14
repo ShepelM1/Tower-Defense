@@ -10,7 +10,7 @@ public class Plot : MonoBehaviour
     [SerializeField] private Color hoverColor;
 
     private GameObject towerObj;
-    public Turret turret;
+    public ArherTower turret;
     private Color startColor;
 
     private void Start()
@@ -34,8 +34,14 @@ public class Plot : MonoBehaviour
 
         if (towerObj != null)
         {
-            turret.OpenUpgradeUI();
-
+            if (turret != null)
+            {
+                turret.OpenUpgradeUI();
+            }
+            else
+            {
+                Debug.LogError("ArherTower component is null on towerObj.");
+            }
             return;
         }
 
@@ -50,6 +56,7 @@ public class Plot : MonoBehaviour
         LevelManager.main.SpendCurrency(towerToBuild.cost);
 
         towerObj = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
-        turret = towerObj.GetComponent<Turret>();
+        turret = towerObj.GetComponent<ArherTower>();
     }
+
 }
