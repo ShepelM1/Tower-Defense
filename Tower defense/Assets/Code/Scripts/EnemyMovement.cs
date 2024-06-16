@@ -45,7 +45,6 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-
     private void FixedUpdate()
     {
         rb.velocity = direction * moveSpeed;
@@ -58,17 +57,6 @@ public class EnemyMovement : MonoBehaviour
 
     public void ResetSpeed()
     {
-        if (TryGetComponent(out Health health))
-        {
-            float currentHitPoints = health.hitPoints;
-            if (currentHitPoints <= 0)
-            {
-                moveSpeed = 0;
-            }
-            else
-            {
-                moveSpeed = baseSpeed;
-            }
-        }
+        moveSpeed = baseSpeed;
     }
 }

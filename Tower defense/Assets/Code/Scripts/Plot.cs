@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class Plot : MonoBehaviour
 {
@@ -10,7 +7,7 @@ public class Plot : MonoBehaviour
     [SerializeField] private Color hoverColor;
 
     private GameObject towerObj;
-    public ArherTower turret;
+    public BallistaTowerLv1 turret;
     private Color startColor;
 
     private void Start()
@@ -40,7 +37,7 @@ public class Plot : MonoBehaviour
             }
             else
             {
-                Debug.LogError("ArherTower component is null on towerObj.");
+                Debug.LogError("ArcherTower component is null on towerObj.");
             }
             return;
         }
@@ -56,7 +53,7 @@ public class Plot : MonoBehaviour
         LevelManager.main.SpendCurrency(towerToBuild.cost);
 
         towerObj = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
-        turret = towerObj.GetComponent<ArherTower>();
+        turret = towerObj.GetComponent<BallistaTowerLv1>();
+        gameObject.SetActive(false);
     }
-
 }

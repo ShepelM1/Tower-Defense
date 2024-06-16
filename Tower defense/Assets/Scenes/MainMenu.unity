@@ -227,7 +227,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 734193105, guid: fa57674d50c20594c8c20632d3630c53, type: 3}
+  m_Sprite: {fileID: 108688941, guid: 26e3f75660831ec4a8c39cc48c49e8f9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1771,10 +1771,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa799e4d6d28a7744bc24d5cb5ede046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicOnImage: {fileID: 734193105, guid: fa57674d50c20594c8c20632d3630c53, type: 3}
-  musicOffImage: {fileID: -634270858, guid: fa57674d50c20594c8c20632d3630c53, type: 3}
-  SFXOnImage: {fileID: 751442823, guid: fa57674d50c20594c8c20632d3630c53, type: 3}
-  SFXOffImage: {fileID: 988871024, guid: fa57674d50c20594c8c20632d3630c53, type: 3}
+  musicOnImage: {fileID: 108688941, guid: 26e3f75660831ec4a8c39cc48c49e8f9, type: 3}
+  musicOffImage: {fileID: 620871383, guid: 26e3f75660831ec4a8c39cc48c49e8f9, type: 3}
+  SFXOnImage: {fileID: -1143739325, guid: 26e3f75660831ec4a8c39cc48c49e8f9, type: 3}
+  SFXOffImage: {fileID: -129882644, guid: 26e3f75660831ec4a8c39cc48c49e8f9, type: 3}
   musicAudioSource: {fileID: 1756299638}
   soundEffectsAudioSource: {fileID: 823145274}
   musicButton: {fileID: 47057708}
@@ -2130,7 +2130,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 751442823, guid: fa57674d50c20594c8c20632d3630c53, type: 3}
+  m_Sprite: {fileID: -1143739325, guid: 26e3f75660831ec4a8c39cc48c49e8f9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3025,7 +3025,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

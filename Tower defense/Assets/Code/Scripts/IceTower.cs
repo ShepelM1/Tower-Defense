@@ -14,6 +14,7 @@ public class IceTower : MonoBehaviour
     [SerializeField] private float freezeTime = 1f;
 
     private float timeUntilFire;
+    private List<EnemyMovement> enemiesInRange = new List<EnemyMovement>();
 
     private void Update()
     {
@@ -21,33 +22,61 @@ public class IceTower : MonoBehaviour
 
         if (timeUntilFire >= 1f / aps)
         {
+            UpdateEnemiesInRange();
             FreezeEnemies();
             timeUntilFire = 0f;
         }
     }
 
-    private void FreezeEnemies()
+    private void UpdateEnemiesInRange()
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, targetingRange, enemyMask);
+        List<EnemyMovement> currentEnemies = new List<EnemyMovement>();
 
-        if (hits.Length > 0)
+        foreach (Collider2D hit in hits)
         {
-            foreach (Collider2D hit in hits)
+            EnemyMovement em = hit.GetComponent<EnemyMovement>();
+            if (em != null)
             {
-                EnemyMovement em = hit.GetComponent<EnemyMovement>();
-                if (em != null)
+                currentEnemies.Add(em);
+                if (!enemiesInRange.Contains(em))
                 {
                     em.UpdateSpeed(0.5f);
-                    StartCoroutine(ResetEnemySpeed(em));
+                    enemiesInRange.Add(em);
                 }
             }
+        }
+
+        foreach (EnemyMovement em in enemiesInRange.ToArray())
+        {
+            if (!currentEnemies.Contains(em))
+            {
+                em.ResetSpeed();
+                enemiesInRange.Remove(em);
+            }
+        }
+    }
+
+    private void FreezeEnemies()
+    {
+        foreach (EnemyMovement em in enemiesInRange)
+        {
+            em.UpdateSpeed(0.5f);
+            StartCoroutine(ResetEnemySpeed(em));
         }
     }
 
     private IEnumerator ResetEnemySpeed(EnemyMovement em)
     {
         yield return new WaitForSeconds(freezeTime);
-        em.ResetSpeed();
+        if (enemiesInRange.Contains(em))
+        {
+            em.UpdateSpeed(0.5f);
+        }
+        else
+        {
+            em.ResetSpeed();
+        }
     }
 
 #if UNITY_EDITOR

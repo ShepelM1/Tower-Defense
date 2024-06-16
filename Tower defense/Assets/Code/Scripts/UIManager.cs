@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
@@ -10,7 +8,14 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        main = this;
+        if (main == null)
+        {
+            main = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void SetHoveringState(bool state)
