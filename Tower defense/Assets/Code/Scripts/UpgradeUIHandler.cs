@@ -15,11 +15,6 @@ public class UpgradeUIHandler : MonoBehaviour, IPointerEnterHandler, IPointerExi
         UpdatePriceText();
     }
 
-    public void SetMaxLevel()
-    {
-        priceText.SetText("Max Level");
-    }
-
     public void OnPointerEnter(PointerEventData eventData)
     {
         mouse_over = true;

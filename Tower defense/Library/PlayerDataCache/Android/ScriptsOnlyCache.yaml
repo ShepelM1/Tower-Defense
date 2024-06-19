@@ -2,6 +2,9 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AudioManager
+    - BallistaTowerLv1
+    - BallistaTowerLv2
+    - BallistaTowerLv3
     - BuildManager
     - Bullet
     - EnemyMovement
@@ -14,7 +17,6 @@ ScriptsOnlyBuild:
     - OptionMenu
     - PauseMenu
     - Plot
-    - Turret
     - UIManager
     - UpgradeUIHandler
     - VolumeSettings
@@ -159,8 +161,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 58
       Script: {instanceID: 0}
-    - Class: 61
-      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
@@ -172,11 +172,13 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 632}
+    - Class: 114
       Script: {instanceID: 16612}
     - Class: 114
       Script: {instanceID: 16664}
     - Class: 114
-      Script: {instanceID: 16884}
+      Script: {instanceID: 17012}
     - Class: 114
       Script: {instanceID: 17804}
     - Class: 114
@@ -196,25 +198,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 20576}
     - Class: 114
-      Script: {instanceID: 20864}
+      Script: {instanceID: 20668}
     - Class: 114
-      Script: {instanceID: 21002}
+      Script: {instanceID: 20866}
     - Class: 114
-      Script: {instanceID: 21038}
+      Script: {instanceID: 21004}
     - Class: 114
-      Script: {instanceID: 21178}
+      Script: {instanceID: 21040}
     - Class: 114
-      Script: {instanceID: 21922}
+      Script: {instanceID: 21180}
     - Class: 114
-      Script: {instanceID: 21930}
+      Script: {instanceID: 21268}
     - Class: 114
-      Script: {instanceID: 22324}
+      Script: {instanceID: 21926}
     - Class: 114
-      Script: {instanceID: 22980}
+      Script: {instanceID: 21934}
     - Class: 114
-      Script: {instanceID: 23010}
+      Script: {instanceID: 22328}
     - Class: 114
-      Script: {instanceID: 24430}
+      Script: {instanceID: 22984}
+    - Class: 114
+      Script: {instanceID: 23014}
+    - Class: 114
+      Script: {instanceID: 24434}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -232,6 +238,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
+    - Class: 483693784
+      Script: {instanceID: 0}
+    - Class: 1839735485
       Script: {instanceID: 0}
     Assets/Scenes/MainMenu.unity:
     - Class: 1
@@ -275,19 +287,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 20090}
     - Class: 114
-      Script: {instanceID: 20910}
+      Script: {instanceID: 20912}
     - Class: 114
-      Script: {instanceID: 21002}
+      Script: {instanceID: 21004}
     - Class: 114
-      Script: {instanceID: 21564}
+      Script: {instanceID: 21568}
     - Class: 114
-      Script: {instanceID: 21922}
+      Script: {instanceID: 21926}
     - Class: 114
-      Script: {instanceID: 22324}
+      Script: {instanceID: 22328}
     - Class: 114
-      Script: {instanceID: 23954}
+      Script: {instanceID: 23958}
     - Class: 114
-      Script: {instanceID: 24514}
+      Script: {instanceID: 24518}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -361,12 +373,6 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 0710afc078cb376cd011bc047dab315b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Turret
-  - hash:
-      serializedVersion: 2
       Hash: ea1569413d805748b7cef2dcb4622c85
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -383,6 +389,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseExitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 6dff99b9e88169973f7eccbfe38823b6
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BallistaTowerLv1
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -679,7 +691,7 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExit2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 312f2177bf85dd72c6af73a95b38bd73
+      Hash: 1f38812d2ee1cd265f33dde92e3eca4d
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Plot
@@ -703,7 +715,7 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: 46b75df7a1b26fd53313a66b5e5a5f7e
+      Hash: 6f82284b1540db53ce22d14e86f65cd9
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: VolumeSettings
@@ -835,7 +847,7 @@ ScriptsOnlyBuild:
     className: UIManager
   - hash:
       serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
+      Hash: d97ec7f80d0c4b411b8eea53b02e0a92
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PauseMenu
@@ -869,6 +881,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnEndDragMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 20535723c56b3273acb52275baa3b3b9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BallistaTowerLv2
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -961,7 +979,7 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: d22dad965e27546b8222e3c14a6742d3
+      Hash: 027663581f10eca489711dfadeccd02d
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Health
@@ -995,6 +1013,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkinUpdateHelper
+  - hash:
+      serializedVersion: 2
+      Hash: add75c513abc7683fcd022cd604d0587
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BallistaTowerLv3
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1159,7 +1183,7 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerEnter2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 234e6150e128f977fabf0e444db88328
+      Hash: 3fdb74b449486eeec4c6bc98cf8e9780
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: EnemyMovement
@@ -1339,7 +1363,7 @@ ScriptsOnlyBuild:
     className: SpriteLibrarySourceAsset
   - hash:
       serializedVersion: 2
-      Hash: 60c653380ae342e561abb8bc3dff4115
+      Hash: 445fa325cb6629807303a5ed0f735eb5
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: UpgradeUIHandler
@@ -1401,4 +1425,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Level1.unity
-  playerPath: "E:/DDDDDDDDDDDDDDD/\u0415\u0443\u0456\u0435/ddsad.apk"
+  playerPath: "E:/DDDDDDDDDDDDDDD/\u0415\u0443\u0456\u0435/Tower Defense.apk"
